@@ -1,0 +1,45 @@
+{
+    // Use o IntelliSense para saber mais sobre os atributos possíveis.
+    // Focalizar para exibir as descrições dos atributos existentes.
+    // Para obter mais informações, acesse: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'upload_file'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=upload_file",
+                    "--package=upload_file"
+                ],
+                "filter": {
+                    "name": "upload_file",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'upload_file'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=upload_file",
+                    "--package=upload_file"
+                ],
+                "filter": {
+                    "name": "upload_file",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
